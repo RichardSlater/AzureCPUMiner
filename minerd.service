@@ -1,0 +1,10 @@
+[Unit]
+Description=CPU Miner Daemon
+After=network.target
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/src/cpuminer/minerd --url=stratum+tcp://ltc.ghash.io:3333 --user=up101300703.%H --algo=scrypt
+
+[Install]
+WantedBy=multi-user.target
